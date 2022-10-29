@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->elder_id()->references('id')->on("users");
-            $table->caretaker_id()->references('id')->on("users");
-            $table->timestamp('time_created');
-            $table->boolean('is_visible');
-            
-
-
+        $table->elder_id()->references('id')->on("users");
+        $table->caretaker_id()->references('id')->on("users");
+        $table->string('text', 300)->change();
+        $table->timestamp('time_sent');
+        $table->timestamp('time_received');
     }
-    }
+
     /**
      * Reverse the migrations.
      *
