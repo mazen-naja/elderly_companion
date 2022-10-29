@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::create('chats', function (Blueprint $table) {
         $table->elder_id()->references('id')->on("users");
         $table->caretaker_id()->references('id')->on("users");
         $table->string('text', 300)->change();
         $table->timestamp('time_sent');
         $table->timestamp('time_received');
-    }
+    });
+}
 
     /**
      * Reverse the migrations.

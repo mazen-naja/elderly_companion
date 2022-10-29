@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
-            $table->elder_id()->references('id')->on("users");
-            $table->caretaker_id()->references('id')->on("users");
-            $table->timestamp('time_created');
-            $table->boolean('is_visible');
-            
-
-
+        Schema::create('push_notifications', function (Blueprint $table) {
+        $table->id();
+        $table->schedule_elder_id()->references('elder_id')->on("schedules");
+        $table->boolean('is_visible');
     });
     }
+
     /**
      * Reverse the migrations.
      *
