@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
-            $table->elder_id()->references('id')->on("users");
-            $table->caretaker_id()->references('id')->on("users");
+        Schema::create('elders_caretakers', function (Blueprint $table) {
+            $table->unsignedBigInteger('elder_id');
+            $table->foreign('elder_id')->references('id')->on('users');
+            $table->unsignedBigInteger('caretaker_id');
+            $table->foreign('caretaker_id')->references('id')->on('users');           
             $table->boolean('is_accepted');
     });
     }

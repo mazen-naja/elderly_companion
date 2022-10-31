@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('push_notifications', function (Blueprint $table) {
         $table->id();
-        $table->schedule_elder_id()->references('elder_id')->on("schedules");
+        $table->unsignedBigInteger('schedule_elder_id');
+        $table->foreign('schedule_elder_id')->references('elder_id')->on('schedules');
         $table->boolean('notify');
-    });
+        });
     }
 
     /**

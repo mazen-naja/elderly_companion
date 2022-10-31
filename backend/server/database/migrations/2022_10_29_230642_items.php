@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('times_needed');
-            $table->elder_id()->references('id')->on("users");
-            $table->item_type_id()->references('id')->on("item_type");
-
+            $table->unsignedBigInteger('elder_id');
+            $table->foreign('elder_id')->references('id')->on('users');
+            $table->unsignedBigInteger('item_type_id');
+            $table->foreign('item_type_id')->references('id')->on('item_type');
         });
     }
 

@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('items_schedules', function (Blueprint $table) {
-            $table->item_type_id()->references('id')->on("item_type");
-            $table->schedule_id()->references('id')->on("schedules");
+            $table->unsignedBigInteger('item_type_id');
+            $table->foreign('item_type_id')->references('id')->on('item_type');
+            $table->unsignedBigInteger('schedule_id');
+            $table->foreign('schedule_id')->references('id')->on('schedules');
         });
     }
 

@@ -14,14 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('schedules', function (Blueprint $table) {
-            $table->elder_id()->references('id')->on("users");
-            $table->caretaker_id()->references('id')->on("users");
-            $table->timestamp('time_created');
+            $table->id();
+            $table->unsignedBigInteger('elder_id');
+            $table->foreign('elder_id')->references('id')->on('users');
+            $table->unsignedBigInteger('caretaker_id');
+            $table->foreign('caretaker_id')->references('id')->on('users');
+            $table->timestamp('time_created')->useCurrent();
             $table->boolean('is_visible');
             
+           
 
-
-    });
+        });
     }
     /**
      * Reverse the migrations.
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('schedules');//
     }
 };
