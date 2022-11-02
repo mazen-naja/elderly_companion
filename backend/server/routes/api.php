@@ -10,6 +10,7 @@ Route::group(["prefix"=> "v0.1"], function(){
 
 Route::get('/schedule/{elder_id}', [Schedules::class,'getItems']);
 Route::get('/item/{item}', [Schedules::class,'getItem']);
+Route::post('/create-item', [Schedules::class,'createItem']);
 Route::post('/elder-request', [EldersCaretakers::class,'elder_send_request']);
 Route::post('/elder-request-accept', [EldersCaretakers::class,'elder_accept_request']);
 Route::post('/caretaker-request', [EldersCaretakers::class,'caretaker_send_request']);
