@@ -6,7 +6,7 @@ use App\Http\Controllers\Schedules;
 use App\Http\Controllers\EldersCaretakers;
 
 
-
+Route::group(["prefix"=> "v0.1"], function(){
 
 Route::get('/schedule/{elder_id}', [Schedules::class,'getItems']);
 Route::get('/item/{item}', [Schedules::class,'getItem']);
@@ -19,6 +19,7 @@ Route::post('/elder-caretakers-requests', [EldersCaretakers::class,'getElders_ca
 Route::post('/caretaker-elders', [EldersCaretakers::class,'getCaretakers_elders']);
 Route::post('/caretaker-elders-requests', [EldersCaretakers::class,'getCaretakers_elders_requests']);
 
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
