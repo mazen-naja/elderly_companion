@@ -119,6 +119,19 @@ class EldersCaretakers extends Controller
 
     }
 
+    function getCaretakers_elders_requests(Request $request){
+
+        $get_caretakers_requests=Elders_Caretakers::join('users', 'users.id', '=', 'elder_id')
+        ->where('caretaker_id', $request->caretaker_id)
+        ->where('is_accepted',0)
+        ->get(['users.name','users.image','users.gender','users.age']);
+        return response()->json([
+            "status" => "success",
+            "data" => $get_caretakers_requests
+        ], 200);
+
+    }
+
     
 
 
