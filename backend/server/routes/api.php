@@ -15,7 +15,7 @@ Route::post('/elder-request-accept', [EldersCaretakers::class,'elder_accept_requ
 Route::post('/caretaker-request', [EldersCaretakers::class,'caretaker_send_request']);
 Route::post('/caretaker-request-accept', [EldersCaretakers::class,'caretaker_accept_request']);
 Route::post('/elder-caretakers', [EldersCaretakers::class,'getElders_caretakers']);
-
+Route::post('/caretaker-elders', [EldersCaretakers::class,'getCaretakers_elders']);
 
 
 
