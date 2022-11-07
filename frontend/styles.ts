@@ -129,6 +129,52 @@ export default StyleSheet.create({
     borderWidth:1,
     marginTop:10,
     marginBottom:20
-  }
+  },
+
+
+  container2: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginLeft:15
+  },
+
+  card_text:{
+    fontSize:14,
+    fontWeight:"bold",
+    color:'black'
+  },
+  homecard:{
+    justifyContent: 'center',
+    alignItems:'center',
+    marginTop:5,
+    marginLeft:5,
+    marginRight:5,
+    marginBottom:5,
+    paddingVertical: 45,
+    paddingHorizontal: 40,
+    width:'45%',
+    height:'25%',
+    borderRadius: 4,
+    borderBottomWidth:1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    backgroundColor:'white',
+    borderColor:'#1A75BC',
+    elevation: 3,
+    
+  },
+
+  cardicon: {
+    aspectRatio: 1,
+    padding:40,
+    width: 79,
+    height: 79,
+    borderRadius:76/2,
+    borderColor:"#1A75BC",
+    borderWidth:1,
+    marginTop:10,
+    marginBottom:20
+  },
 
 });
