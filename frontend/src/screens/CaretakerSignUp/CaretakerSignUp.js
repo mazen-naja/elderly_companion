@@ -5,13 +5,13 @@ import styles from "../../../styles";
 
 
 
-export default function ElderSignUp() {
+export default function CaretakerSignUp() {
   return (
        
    <View style={styles.container}>
        <Image style={styles.tinyLogo} source={require('./assets/logo.jpeg')} />
        <Text style={styles.text_title}>Elderly Companion</Text>
-       <Text style={styles.text_subtitle}>Elder Sign up</Text>
+       <Text style={styles.text_subtitle}>Caretaker Sign up</Text>
 
        <Text style={styles.text_label}>Full name</Text>
        <TextInput style={styles.input} />
