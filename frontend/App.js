@@ -11,7 +11,7 @@ export default function ElderSchedule() {
       <Image style={styles.tinyLogo} source={require('./assets/scheduleicon.png')} />
       <Text style={styles.text_title}>Schedule</Text>
     
-      <Schedule_card text={'Panadol'} img_src={require('./assets/caretakers.png')} />
+      <Schedule_card text={'Walk'} img_src={require('./assets/walk.png')} />
       
       
     </View>

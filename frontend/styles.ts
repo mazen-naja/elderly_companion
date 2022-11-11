@@ -36,6 +36,7 @@ export default StyleSheet.create({
   marginBottom:15
 },
 
+
   button:{
     justifyContent: 'center',
     alignItems:'center',
@@ -104,8 +105,6 @@ export default StyleSheet.create({
     marginBottom:5
   },
 
-
-
   text_body:{
     fontSize:14
   },
@@ -134,15 +133,67 @@ export default StyleSheet.create({
 
   container2: {
     flexDirection: "row",
-    flexWrap: "wrap",
     marginLeft:15
   },
 
+// Card Styles
+  flex_row3: {
+    flexDirection:'row',
+    marginLeft:'20%',
+   
+    
+  },
+  
+  flex_row4: {
+    flexDirection:'row',
+    alignItems:'center'
+    
+  },
+  flex_column: {
+    flexDirection:'column',
+    marginLeft:'5%',
+    marginRight:'5%',
+    backgroundColor:'white',
+    
+  },
+
   card_text:{
+    
+    width:'50%',
     fontSize:14,
     fontWeight:"bold",
     color:'black'
+    
   },
+  
+  card_text_upper:{
+    marginLeft:'20%',
+    width:'30%',
+    fontSize:14,
+    fontWeight:"bold",
+    color:'black',
+  },
+  card_text_reg:{
+    width:'40%',
+    fontSize:12,
+    color:'black'
+    
+  },
+  card_label:{
+    width:'30%',
+    fontSize:14,
+    color:'black',
+    marginLeft:'10%',
+  },
+
+  cardlogo: {
+    width: 61,
+    height: 61,
+    borderRadius:76/2,
+    marginTop:5,
+    marginBottom:10
+  },
+
   homecard:{
     justifyContent: 'center',
     alignItems:'center',
