@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
+import { Text, View ,Image } from 'react-native';
 import styles from "../../styles";
 
 
 
 const Schedule_card=(props)=>{
     return (
-
+                
             <View style={styles.flex_column}>
-            
+               
                 <View style={styles.flex_row3}>
                 <Text style={styles.card_text}>{props.text}</Text>
                 <Text style={styles.card_text_upper}>Edit</Text>
