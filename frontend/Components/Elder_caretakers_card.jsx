@@ -15,4 +15,4 @@ const Elder_caretakers_card=(props)=>{
 );
 };
 
-export default Schedule_card;
+export default Elder_caretakers_card;

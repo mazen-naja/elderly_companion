@@ -167,6 +167,15 @@ export default StyleSheet.create({
     color:'black'
     
   },
+  card_title:{
+    width:'40%',
+    fontSize:16,
+    color:'black',
+    fontWeight:'bold',
+    marginBottom:5,
+    alignSelf:'flex-start',
+    marginLeft:'3%'
+  },
   
   card_text_upper:{
     marginLeft:'15%',

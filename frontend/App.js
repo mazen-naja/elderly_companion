@@ -5,16 +5,19 @@ import Schedule_card from "./Components/Cards/Elder_schedule_card";
 export default function ElderSchedule() {
   return (
 
-
-    <View style={styles.container}>
-     
-      <Image style={styles.tinyLogo} source={require('./assets/scheduleicon.png')} />
-      <Text style={styles.text_title}>Schedule</Text>
     
+   
+      
+    
+    <View style={styles.container}>
+      
+      <Image style={styles.tinyLogo} source={require('./assets/scheduleicon.png')} />
+      <Text style={styles.text_title}>Schedule</Text>   
+      <Text style={styles.card_title}>name</Text>
       <Schedule_card text={'Walk'} time={'12:09pm'} img_src={require('./assets/walk.png')} />
-      
-      
     </View>
+
+    
   );
 
 }

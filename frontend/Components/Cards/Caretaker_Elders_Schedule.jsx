@@ -6,7 +6,8 @@ import styles from "../../styles";
 
 const Schedule_card=(props)=>{
     return (
-
+        <View>
+            <Text style={styles.card_title}>{props.Elder_title}</Text> 
             <View style={styles.flex_column}>
                 <View style={styles.flex_row3}>
                 <Text style={styles.card_text}>{props.text}</Text>
@@ -21,7 +22,7 @@ const Schedule_card=(props)=>{
                     <Text style={styles.card_label}>{props.time}</Text>
                 </View>
             </View>
-       
+        </View> 
     );
 };
 
