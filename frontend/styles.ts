@@ -139,7 +139,8 @@ export default StyleSheet.create({
 // Card Styles
   flex_row3: {
     flexDirection:'row',
-    marginLeft:'20%',
+    marginLeft:'21%',
+    alignContent:'flex-start'
    
     
   },
@@ -151,9 +152,10 @@ export default StyleSheet.create({
   },
   flex_column: {
     flexDirection:'column',
-    marginLeft:'5%',
-    marginRight:'5%',
+    marginLeft:'2%',
+    marginRight:'2%',
     backgroundColor:'white',
+    
     
   },
 
@@ -167,8 +169,8 @@ export default StyleSheet.create({
   },
   
   card_text_upper:{
-    marginLeft:'20%',
-    width:'30%',
+    marginLeft:'15%',
+    width:'40%',
     fontSize:14,
     fontWeight:"bold",
     color:'black',
@@ -176,23 +178,31 @@ export default StyleSheet.create({
   card_text_reg:{
     width:'40%',
     fontSize:12,
-    color:'black'
+    color:'black',
     
   },
   card_label:{
-    width:'30%',
+    width:'40%',
     fontSize:14,
     color:'black',
-    marginLeft:'10%',
+    marginLeft:'15%',
+  },
+
+  card_frame:{
+      marginTop:'1%',
+      marginLeft:'5%'    
   },
 
   cardlogo: {
+    paddingTop:5,
     width: 61,
     height: 61,
     borderRadius:76/2,
     marginTop:5,
-    marginBottom:10
+    marginBottom:10,
+    
   },
+ 
 
   homecard:{
     justifyContent: 'center',
