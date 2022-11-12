@@ -4,7 +4,7 @@ import styles from "../../styles";
 
 
 
-const Schedule_card=(props)=>{
+const Caretaker_Schedule_card=(props)=>{
     return (
         <View>
             <Text style={styles.card_title}>{props.Elder_title}</Text> 
@@ -26,4 +26,4 @@ const Schedule_card=(props)=>{
     );
 };
 
-export default Schedule_card;
+export default Caretaker_Schedule_card;
