@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#F3F2F2',
     alignItems: 'center',
+    flexDirection:'column'
   },
 
   flex_row: {
@@ -212,6 +213,10 @@ export default StyleSheet.create({
     
   },
  
+
+  sender:{
+
+  },
 
   homecard:{
     justifyContent: 'center',

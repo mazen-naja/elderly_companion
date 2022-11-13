@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
+const CaretakerSignUp=()=>{
 
+   return (
 
-export default function CaretakerSignUp() {
-  return (
        
    <View style={styles.container}>
        <Image style={styles.tinyLogo} source={require('./assets/logo.jpeg')} />
@@ -37,4 +37,5 @@ export default function CaretakerSignUp() {
   </View>
     
   );
-}
+};
+export default CaretakerSignUp;

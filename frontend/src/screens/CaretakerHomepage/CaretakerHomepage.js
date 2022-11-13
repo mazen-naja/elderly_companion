@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
-export default function App() {
+const CaretakerHomepage=()=>{
+
   return (
 
 
@@ -40,4 +41,6 @@ export default function App() {
     </View>
   );
 
-}
+};
+
+export default CaretakerHomepage;

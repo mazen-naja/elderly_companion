@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "./styles";
 
-export default function ElderHomePage() {
-  return (
+const ElderHomepage=()=>{
 
+  return (
 
     <View style={styles.container}>
      
@@ -43,4 +43,6 @@ export default function ElderHomePage() {
     </View>
   );
 
-}
+};
+
+export default ElderHomepage;
