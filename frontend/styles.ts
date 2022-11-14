@@ -5,7 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#F3F2F2',
     alignItems: 'center',
-    flexDirection:'column'
+    
   },
 
   flex_row: {
@@ -219,16 +219,13 @@ export default StyleSheet.create({
   },
 
   homecard:{
+    flex:1,
     justifyContent: 'center',
     alignItems:'center',
-    marginTop:5,
-    marginLeft:5,
-    marginRight:5,
-    marginBottom:5,
-    paddingVertical: 45,
-    paddingHorizontal: 40,
-    width:'45%',
-    height:'25%',
+    margin:5,
+    paddingVertical: 16,
+    width:200,
+    height:200,
     borderRadius: 4,
     borderBottomWidth:1,
     borderRightWidth:1,
@@ -241,15 +238,42 @@ export default StyleSheet.create({
   },
 
   cardicon: {
-    aspectRatio: 1,
-    padding:40,
-    width: 79,
-    height: 79,
+    width: 87,
+    height: 87,
     borderRadius:76/2,
     borderColor:"#1A75BC",
-    borderWidth:1,
-    marginTop:10,
-    marginBottom:20
+    padding:25,
+    resizeMode: 'contain',
+    
+  },
+
+
+
+
+  // Elder homepage
+  home_container: {
+    flex: 1,
+    margin:5,
+    backgroundColor: '#F3F2F2',
+    alignItems: 'center',
+    flexDirection:'column'
+  },
+
+
+  home_container2: {
+    flex:1,
+    flexDirection: "column",
+  },
+
+  flex_homerow2: {
+    flexDirection:'row',
+  },
+  card_hometext:{
+    marginTop:15,
+    fontSize:14,
+    fontWeight:"bold",
+    color:'black'
+    
   },
 
 });

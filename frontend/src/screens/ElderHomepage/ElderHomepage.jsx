@@ -1,45 +1,33 @@
 import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
-import styles from "./styles";
+import styles from "../../../styles";
+import { StatusBar } from 'expo-status-bar';
+import Homepage_card from "../../../Components/Cards/HomepageCard";
+
+<StatusBar style="auto" />
 
 const ElderHomepage=()=>{
 
   return (
-
-    <View style={styles.container}>
-     
-      <Image style={styles.tinyLogo} source={require('./assets/oldmanicon.jpeg')} />
-      <Text style={styles.text_title}>Welcome Elder !</Text>
-      <View style={styles.container2}>
-          <TouchableOpacity flex style={styles.homecard}>
-                            <Image style={styles.cardicon} source={require('./assets/scheduleicon.png')} />
-                            <Text style={styles.card_text}>Schedule</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.homecard}>
-          <Image style={styles.cardicon} source={require('./assets/medicines.jpeg')} />
-                            <Text style={styles.card_text}>Medicines</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.homecard}>
-          <Image style={styles.cardicon} source={require('./assets/caretakers.png')} />
-                            <Text style={styles.card_text}>Caretakers</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.homecard}>
-          <Image style={styles.cardicon} source={require('./assets/chat.png')} />
-                            <Text style={styles.card_text}>Chat</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.homecard}>
-          <Image style={styles.cardicon} source={require('./assets/editprofile.jpg')} />
-                            <Text style={styles.card_text}>Edit profile</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.homecard}>
-          <Image style={styles.cardicon} source={require('./assets/notificationsicon.png')} />
-                            <Text style={styles.card_text}>Notifications</Text>
-          </TouchableOpacity>
+    <View style={styles.home_container}>
       
-      </View>
+      <Image style={styles.tinyLogo} source={require('../../../assets/oldmanicon.jpeg')} />
+      <Text style={styles.text_title}>Welcome Elder !</Text>
+      
+          <View style={styles.flex_homerow2}>
+              <Homepage_card card_text={'Schedule'} img_src={require('../../../assets/scheduleicon.png')}/>
+              <Homepage_card card_text={'Medicines'} img_src={require('../../../assets/medicines.jpeg')}/>
+          </View >
+
+          <View style={styles.flex_homerow2}>
+            <Homepage_card card_text={'Caretakers'} img_src={require('../../../assets/caretakers.png')}/>
+            <Homepage_card card_text={'Chat'} img_src={require('../../../assets/chat.png')}/>
+          </View>
+
+          <View style={styles.flex_homerow2}>
+            <Homepage_card card_text={'Edit profile'} img_src={require('../../../assets/editprofile.jpg')}/>
+            <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')}/>
+          </View>
     </View>
   );
 
