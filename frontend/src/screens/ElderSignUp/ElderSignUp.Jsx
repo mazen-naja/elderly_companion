@@ -5,7 +5,7 @@ import styles from "../../../styles";
 
 
 
-export default function ElderSignUp() {
+const ElderSignUp=({ navigation })=>{
   return (
        
    <View style={styles.container}>
@@ -38,3 +38,5 @@ export default function ElderSignUp() {
     
   );
 }
+
+export default ElderSignUp;

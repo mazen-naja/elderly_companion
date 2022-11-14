@@ -4,8 +4,8 @@ import { Text, View ,Button ,TouchableOpacity, TextInput ,Image } from 'react-na
 import styles from "../../../styles";
 
 
+const RoleScreen=()=>{
 
-export default function RoleScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
@@ -22,3 +22,5 @@ export default function RoleScreen({ navigation }) {
     </View>
   );
 };
+
+export default RoleScreen;
