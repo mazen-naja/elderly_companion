@@ -220,10 +220,6 @@ export default StyleSheet.create({
   },
  
 
-  sender:{
-
-  },
-
   homecard:{
     flex:1,
     justifyContent: 'center',
@@ -281,5 +277,44 @@ export default StyleSheet.create({
     color:'black'
     
   },
+
+
+  flex_sender:{
+    
+    width:'80%',
+    flexDirection:'column',
+    marginLeft:'15%',
+    marginRight:'2%',
+    backgroundColor:'#1A75BC',
+    borderRadius:13,
+    height:100,
+    padding:15,
+    
+  },
+
+  
+  sender:{
+    color:'white',
+    fontSize:14,
+    fontWeight:'bold',
+    width:'80%'
+  },
+  sent_time:{
+    color:'white',
+    fontSize:12,
+    width:'20%',
+  },
+  sender_text:{
+    marginTop:15,
+    color:'white',
+    fontSize:12,
+  
+  },
+
+  flex_row_sender:{
+    flexDirection:'row',
+    alignContent:'flex-start',
+    justifyContent:'flex-start'
+  }
 
 });

@@ -8,9 +8,15 @@ import styles from "../../styles";
 const Sender_card=(props)=>{
     return (
 
-<View style={styles.flex_column}>
-<Text style={styles.card_text}>{props.sender}</Text>
-<Text style={styles.card_text}>{props.text}</Text>
+<View style={styles.flex_sender}>
+
+    <View style={styles.flex_row_sender}>
+        <Text style={styles.sender}>{props.sender}</Text>
+        <Text style={styles.sent_time}>{props.sent_time}</Text>
+    </View>
+
+
+    <Text style={styles.sender_text}>{props.text}</Text>
 
 </View>
 
