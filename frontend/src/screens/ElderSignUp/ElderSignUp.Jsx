@@ -5,11 +5,11 @@ import styles from "../../../styles";
 
 
 
-const ElderSignUp=({ navigation })=>{
+const ElderSignUp=({navigation})=>{
   return (
        
    <View style={styles.container}>
-       <Image style={styles.tinyLogo} source={require('./assets/logo.jpeg')} />
+       <Image style={styles.tinyLogo} source={require('../../../assets/logo.jpeg')} />
        <Text style={styles.text_title}>Elderly Companion</Text>
        <Text style={styles.text_subtitle}>Elder Sign up</Text>
 
@@ -37,6 +37,6 @@ const ElderSignUp=({ navigation })=>{
   </View>
     
   );
-}
+};
 
 export default ElderSignUp;

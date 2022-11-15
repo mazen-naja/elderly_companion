@@ -110,6 +110,12 @@ export default StyleSheet.create({
     fontSize:14
   },
 
+  text_hyper:{
+    fontSize:14,
+    fontWeight:'bold',
+    color:'#1A75BC'
+  },
+
   input: {
     width:'70%',
     height: 40,

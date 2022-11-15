@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
-const CaretakerSignUp=()=>{
+const CaretakerSignUp=({navigation})=>{
 
    return (
 
        
    <View style={styles.container}>
-       <Image style={styles.tinyLogo} source={require('./assets/logo.jpeg')} />
+       <Image style={styles.tinyLogo} source={require('../../../assets/logo.jpeg')} />
        <Text style={styles.text_title}>Elderly Companion</Text>
        <Text style={styles.text_subtitle}>Caretaker Sign up</Text>
 

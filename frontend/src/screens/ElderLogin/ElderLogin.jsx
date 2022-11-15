@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from "react";
-import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
+import { Text, View ,Pressable,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
-const ElderLogin=()=>{
+const ElderLogin=({navigation})=>{
 
   return (
     <View style={styles.container}>
@@ -17,7 +17,9 @@ const ElderLogin=()=>{
       <TouchableOpacity style={styles.sign_button}>
                   <Text style={styles.sign_text}>Sign in</Text>
       </TouchableOpacity>
-      <Text style={styles.text_body}>Don't have an account ? Sign up</Text>
+      <Pressable  onPress={() => {navigation.navigate("ElderSignUp")}}>
+      <Text style={styles.text_body}>Don't have an account ? <Text style={styles.text_hyper}>Sign up</Text></Text>
+      </Pressable>
       <StatusBar style="auto" />
     </View>
   );
