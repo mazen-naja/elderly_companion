@@ -9,11 +9,10 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 
-
 class User extends Authenticatable implements JWTSubject
 {
-    // use HasApiTokens, HasFactory, Notifiable;
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -24,7 +23,7 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
         'gender',
-        'age'
+        'age',
     ];
 
     /**
@@ -45,25 +44,12 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-
     public function getJWTIdentifier()
     {
         return $this->getKey();
     }
-
-    /**
-     * Return a key value array, containing any custom claims to be added to the JWT.
-     *
-     * @return array
-     */
     public function getJWTCustomClaims()
     {
         return [];
     }
-
-
-
-    // public $timestamps = false;
-    protected $table = 'users';
 }
