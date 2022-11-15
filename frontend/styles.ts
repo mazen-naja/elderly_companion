@@ -307,7 +307,7 @@ export default StyleSheet.create({
   sender_text:{
     marginTop:15,
     color:'white',
-    fontSize:12,
+    fontSize:14,
   
   },
 
@@ -315,6 +315,49 @@ export default StyleSheet.create({
     flexDirection:'row',
     alignContent:'flex-start',
     justifyContent:'flex-start'
-  }
+  },
+
+  flex_row_received:{
+    flexDirection:'row',
+    alignContent:'flex-start',
+    justifyContent:'flex-start'
+  },
+
+  received_text:{
+    marginTop:15,
+    color:'black',
+    fontSize:14,
+  
+  },
+
+  received_time:{
+    color:'black',
+    fontSize:12,
+    width:'20%',
+  },
+
+  received:{
+    color:'black',
+    fontSize:14,
+    fontWeight:'bold',
+    width:'80%'
+  },
+
+
+  flex_received:{
+    marginTop:15,
+    width:'80%',
+    flexDirection:'column',
+    marginLeft:'2%',
+    marginRight:'15%',
+    backgroundColor:'white',
+    borderColor:'#1A75BC',
+    borderRadius:13,
+    borderWidth:1,
+    height:100,
+    padding:15,
+    
+  },
+
 
 });
