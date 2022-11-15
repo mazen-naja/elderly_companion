@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Text, View ,Pressable,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
+
+<StatusBar style="auto" />
 const ElderLogin=({navigation})=>{
 
   return (
@@ -20,7 +22,7 @@ const ElderLogin=({navigation})=>{
       <Pressable  onPress={() => {navigation.navigate("ElderSignUp")}}>
       <Text style={styles.text_body}>Don't have an account ? <Text style={styles.text_hyper}>Sign up</Text></Text>
       </Pressable>
-      <StatusBar style="auto" />
+      
     </View>
   );
 };

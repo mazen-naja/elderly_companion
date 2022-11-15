@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
-
+<StatusBar style="auto" />
 
 const ElderSignUp=({navigation})=>{
   return (
@@ -33,7 +33,7 @@ const ElderSignUp=({navigation})=>{
                    <Text style={styles.sign_text}>Sign up</Text>
        </TouchableOpacity>
 
-       <StatusBar style="auto" />
+    
   </View>
     
   );

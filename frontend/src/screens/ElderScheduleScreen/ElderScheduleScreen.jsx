@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 import Schedule_card from "../../../Components/Cards/Elder_schedule_card";
+import { StatusBar } from "expo-status-bar";
 
+<StatusBar style="auto" />
 const ElderScheduleScreen=()=>{
     return (
    
-      
-    
     <View style={styles.container}>
       
       <Image style={styles.tinyLogo} source={require('../../../assets/scheduleicon.png')} />

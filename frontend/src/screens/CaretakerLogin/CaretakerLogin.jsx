@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity,Pressable, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
+<StatusBar style="auto" />
 
 const CaretakerLogin=({navigation})=>{
 
@@ -25,7 +26,6 @@ const CaretakerLogin=({navigation})=>{
         <Text style={styles.text_hyper}>Sign up</Text></Text>
       </Pressable>
 
-      {/* <StatusBar style="auto" /> */}
     </View>
   );
 };

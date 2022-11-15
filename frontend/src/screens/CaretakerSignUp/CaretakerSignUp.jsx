@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
+
+<StatusBar style="auto" />
+
 const CaretakerSignUp=({navigation})=>{
 
    return (
@@ -33,7 +36,7 @@ const CaretakerSignUp=({navigation})=>{
                    <Text style={styles.sign_text}>Sign up</Text>
        </TouchableOpacity>
 
-       <StatusBar style="auto" />
+    
   </View>
     
   );

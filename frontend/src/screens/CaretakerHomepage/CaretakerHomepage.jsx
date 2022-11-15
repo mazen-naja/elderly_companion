@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Text, View ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
+<StatusBar style="auto" />
+
 const CaretakerHomepage=()=>{
 
   return (

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Text, View ,Button ,TouchableOpacity, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 
-
+<StatusBar style="auto" />
 const RoleScreen=({navigation})=>{
 
   
@@ -18,7 +18,7 @@ const RoleScreen=({navigation})=>{
       <TouchableOpacity style={styles.button} onPress={() =>  navigation.navigate("CaretakerLogin")}>
                   <Text style={styles.role_text}>Caretaker</Text>
       </TouchableOpacity>
-      <StatusBar style="auto" />
+      
     </View>
   );
 };
