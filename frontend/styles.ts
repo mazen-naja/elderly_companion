@@ -360,4 +360,53 @@ export default StyleSheet.create({
   },
 
 
+  chat_subtitle:{
+    fontSize:20,
+    fontWeight:"bold",
+    width:'70%',
+    marginLeft:5,
+    marginRight:10,
+  },
+  flex_row_subtitle:{
+    marginTop:20,
+    marginBottom:20,
+    flexDirection:'row',
+    justifyContent:'flex-start',
+    alignContent:'flex-start',
+  },
+  flex_column_chat: {
+    flexDirection:'column',
+    width:'95%',
+    marginLeft:'2%',
+    marginRight:'2%',
+    marginBottom:'2%',
+    backgroundColor:'white',
+
+    
+  },
+
+  subtitle_button:{
+    justifyContent: 'center',
+    alignItems:'center',
+    width:'25%',
+    height: 30,
+    borderRadius: 23,
+    borderBottomWidth:1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    backgroundColor:'white',
+    borderColor:'#1A75BC',
+    color:'white',
+    fontWeight:'bold',
+    elevation: 3,
+    
+  },
+
+  chathead: {
+    width: 59,
+    height: 59,
+    borderRadius:59/2, 
+  },
+
 });
