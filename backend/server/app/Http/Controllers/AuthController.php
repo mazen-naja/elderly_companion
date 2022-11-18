@@ -49,6 +49,7 @@ class AuthController extends Controller
             'password' => 'required|string|min:6',
             'gender'=>'required|string|max:9',
             'age'=>'required|integer',
+            'user_type'=>'required|integer',
         ]);
 
         $user = User::create([
