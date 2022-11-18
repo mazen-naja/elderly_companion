@@ -15,18 +15,18 @@ const ElderHomepage=()=>{
       <Text style={styles.text_title}>Welcome Elder !</Text>
       
           <View style={styles.flex_homerow2}>
-              <Homepage_card card_text={'Schedule'} img_src={require('../../../assets/scheduleicon.png')}/>
-              <Homepage_card card_text={'Medicines'} img_src={require('../../../assets/medicines.jpeg')}/>
+              <Homepage_card card_text={'Schedule'} img_src={require('../../../assets/scheduleicon.png')}  />
+              <Homepage_card card_text={'Medicines'} img_src={require('../../../assets/medicines.jpeg')} />
           </View >
 
           <View style={styles.flex_homerow2}>
-            <Homepage_card card_text={'Caretakers'} img_src={require('../../../assets/caretakers.png')}/>
+            <Homepage_card card_text={'Caretakers'} img_src={require('../../../assets/caretakers.png')} />
             <Homepage_card card_text={'Chat'} img_src={require('../../../assets/chat.png')}/>
           </View>
 
           <View style={styles.flex_homerow2}>
-            <Homepage_card card_text={'Edit profile'} img_src={require('../../../assets/editprofile.jpg')}/>
-            <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')}/>
+            <Homepage_card card_text={'Edit profile'} img_src={require('../../../assets/editprofile.jpg')} />
+            <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')} />
           </View>
     </View>
   );
