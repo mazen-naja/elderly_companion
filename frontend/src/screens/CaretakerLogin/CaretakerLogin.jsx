@@ -1,17 +1,70 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Text, View ,TouchableOpacity,Pressable, TextInput ,Image } from 'react-native';
 import styles from "../../../styles";
 import { caretakerlogin } from './caretakerslogin';
+import { useUserStore } from '../../store/UserStore';
+import axios from "axios";
+
+
+
+
+const baseUrl = 'http://192.168.1.6:8000/';
+
 
 <StatusBar style="auto" />
 
-
-
 const CaretakerLogin=({navigation})=>{
+
+
+
+
+
+  
+  const user = useUserStore();
+  const saveUserId = useUserStore((state) => state.setUser)
+  const saveToken = useUserStore((state) => state.setToken);
+  const saveType = useUserStore((state) => state.setUsertype);
+  const user_id = useUserStore((state) => state.user_id);
+
+
+
+  const [userinfo, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [signin, setSignin] = useState('');
+
+
+
+
+  const caretakerlogin= async data=>{
+  
+    try{      
+        const response= await axios({
+            method: 'post',
+            url: baseUrl+'api/login',
+            headers:{'Content-Type': 'application/json'},
+            data,
+            }).then(function (response) {
+                
+                //  setUser(response.data)
+                 if (response.data.status === "success") {
+                    saveUserId(response.data.user.id)
+                    saveToken(response.data.authorisation.token);
+                    // saveProfile(response.data.user.image);
+                    saveType(response.data.user.user_type);
+                    navigation.navigate("CaretakerHomepage")
+                }
+                 
+            }) 
+    } 
+    catch(error){
+        return error.response.data;
+    };  
+};
+
+
+
+
   
     // Whenever the textinput value changes
     const onemailchange = (enteredemail) => {
@@ -28,12 +81,17 @@ const CaretakerLogin=({navigation})=>{
       email: email,
       password: password,
     };
-      
-      caretakerlogin(data);
+    
+     
+       caretakerlogin(data) 
+        // console.log(user_id)
+        
+      //  navigation.navigate("CaretakerHomepage")
       // clear the text field
-      setEmail('');
-      setPassword('');
+      // setEmail('');
+      // setPassword('');
     };
+
   
   return (
 
