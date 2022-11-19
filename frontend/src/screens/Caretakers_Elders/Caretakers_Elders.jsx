@@ -31,7 +31,7 @@ const Caretakers_Elders=({navigation})=>{
                 }).then(function (response) {
                     response.data.data
                     setelderslist(response.data.data)
-            console.log(elders_list)
+                    console.log(elders_list)
                     
                 }) 
         } 
@@ -47,9 +47,9 @@ const Caretakers_Elders=({navigation})=>{
         caretaker_id:user_id
       };
 
-      useEffect(() => {
+    useEffect(() => {
         Cartaker_elders(data)
-    }, [])
+    }, []);
 
     
 
@@ -72,9 +72,9 @@ const Caretakers_Elders=({navigation})=>{
             <ScrollView >
 
              
-                {elders_list.map(post=>
-                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>)
-                )}
+                {elders_list.map ( post=>
+                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>
+                    ))}
 
             </ScrollView>
          
