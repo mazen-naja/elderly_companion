@@ -23,6 +23,19 @@ class schedules extends Controller
 
     }
 
+    function getMedicines(Request $request)
+    {
+        $items=Item::join('item_type as it' ,'it.id' ,'=','item_type_id')
+        ->where('items.elder_id',$request->elder_id)
+        ->where('it.name','Medicine')
+        ->get();
+        
+        return response()->json([
+            "status" => "success",
+            "data" => $items
+        ], 200);
+
+    }
 
     function getItem(Reqeuest $request)
     {
@@ -55,6 +68,22 @@ class schedules extends Controller
             'item_type_id'=> $request->item_type_id
         ]);
 
+
+        return response()->json([
+            "status" => "success",
+            "data" => $create_item
+        ], 200);
+    }
+
+    function createItemType(Reqeuest $request)
+    {
+        $data = $request->validate([
+            'name'=> 'required',
+        ]);
+        $create_item=Item_type::create([
+            'name' => $request->name,
+        ]); 
+
         return response()->json([
             "status" => "success",
             "data" => $create_item
@@ -62,6 +91,32 @@ class schedules extends Controller
     }
 
 
+
+
+
+
+    function createschedule(Reqeuest $request)
+    {
+        $data = $request->validate([
+            'elder_id'=> 'required',
+            'caretaker_id'=> 'required',
+            'time_created'=> 'required',
+            'is_visible'=> 'required',
+        ]);
+
+        $create_item=Schedule::create([
+            'elder_id' => $request->elder_id,
+            'caretaker_id' => $request->caretaker_id,
+            'time_created' => $request->time_created,
+            'is_visible'=> $request->is_visible,
+        ]);
+
+
+        return response()->json([
+            "status" => "success",
+            "data" => $create_item
+        ], 200);
+    }
 
 
 }
