@@ -14,4 +14,6 @@ class Item extends Model
         'elder_id',
         'item_type'
     ];
+
+    protected $table='items';
 }
