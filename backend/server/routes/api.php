@@ -11,6 +11,9 @@ Route::group(["prefix"=> "v0.1"], function(){
 Route::get('/schedule/{elder_id}', [Schedules::class,'getItems']);
 Route::get('/item/{item}', [Schedules::class,'getItem']);
 Route::post('/create-item', [Schedules::class,'createItem']);
+Route::post('/medicines', [Schedules::class,'getMedicines']);
+
+
 Route::post('/elder-request', [EldersCaretakers::class,'elder_send_request']);
 Route::post('/elder-request-accept', [EldersCaretakers::class,'elder_accept_request']);
 Route::post('/caretaker-request', [EldersCaretakers::class,'caretaker_send_request']);
@@ -19,6 +22,8 @@ Route::post('/elder-caretakers', [EldersCaretakers::class,'getElders_caretakers'
 Route::post('/elder-caretakers-requests', [EldersCaretakers::class,'getElders_caretakers_requests']);
 Route::post('/caretaker-elders', [EldersCaretakers::class,'getCaretakers_elders']);
 Route::post('/caretaker-elders-requests', [EldersCaretakers::class,'getCaretakers_elders_requests']);
+
+
 
 });
 
