@@ -17,12 +17,9 @@ const baseUrl = 'http://192.168.1.6:8000/';
 const CaretakerLogin=({navigation})=>{
 
 
-
-
-
   
-  const user = useUserStore();
-  const saveUserId = useUserStore((state) => state.setUser)
+
+  const saveUserId = useUserStore((state) => state.setUser);
   const saveToken = useUserStore((state) => state.setToken);
   const saveType = useUserStore((state) => state.setUsertype);
   const user_id = useUserStore((state) => state.user_id);
@@ -84,12 +81,10 @@ const CaretakerLogin=({navigation})=>{
     
      
        caretakerlogin(data) 
-        // console.log(user_id)
-        
-      //  navigation.navigate("CaretakerHomepage")
+
       // clear the text field
-      // setEmail('');
-      // setPassword('');
+      setEmail('');
+      setPassword('');
     };
 
   
@@ -104,7 +99,7 @@ const CaretakerLogin=({navigation})=>{
       <Text style={styles.text_label}>Email</Text>
       <TextInput key={'emailinput'} style={styles.input} value={email} onChangeText={onemailchange}/>
       <Text style={styles.text_label} >Password</Text>
-      <TextInput key={'passwordinput'} style={styles.input} value={password} onChangeText={setPassword}/>
+      <TextInput key={'passwordinput'} style={styles.input} value={password} secureTextEntry   onChangeText={setPassword}/>
       <TouchableOpacity style={styles.sign_button} onPress={signinHandler}>
                   <Text style={styles.sign_text}>Sign in</Text>
       </TouchableOpacity>
