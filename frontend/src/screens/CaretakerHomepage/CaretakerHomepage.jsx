@@ -41,7 +41,7 @@ const CaretakerHomepage=({navigation})=>{
         <View style={styles.flex_homerow2}>
           {/* <Homepage_card card_text={'Chat'} img_src={require('../../../assets/chat.png')} /> */}
 
-          <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("Caretakers_Elders")}>
+          <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("ChatList")}>
                 <View >
                     <Image style={styles.cardicon} source={require('../../../assets/chat.png')} />
                 </View>
