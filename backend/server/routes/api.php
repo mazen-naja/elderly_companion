@@ -12,6 +12,8 @@ Route::get('/schedule/{elder_id}', [Schedules::class,'getItems']);
 Route::get('/item/{item}', [Schedules::class,'getItem']);
 Route::post('/create-item', [Schedules::class,'createItem']);
 Route::post('/medicines', [Schedules::class,'getMedicines']);
+Route::post('/elder-schedule', [Schedules::class,'getElderSchedule']);
+Route::post('/elder-create-schedule', [Schedules::class,'createschedule']);
 
 
 Route::post('/elder-request', [EldersCaretakers::class,'elder_send_request']);
