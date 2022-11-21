@@ -407,6 +407,49 @@ export default StyleSheet.create({
     width: 59,
     height: 59,
     borderRadius:59/2, 
+    marginBottom:5,
+    marginRight:5
   },
 
+  // flex_row_scroll:{
+
+  //   flex:1,
+  //   flexDirection:'row'
+  // }
+
+
+  flex_column_schedule: {
+    flexDirection:'column',
+    marginLeft:'2%',
+    marginRight:'2%',
+    marginBottom:5,
+    backgroundColor:'white',
+    
+    
+  },
+
+  flex_row_scroll:{
+    // flex:1,
+    flexDirection:'row'
+    
+  },
+
+
+  card_text_elder:{
+    
+    fontSize:14,
+    fontWeight:"bold",
+    color:'black'
+    
+  },
+  card_title_sched:{
+    width:'40%',
+    fontSize:16,
+    color:'black',
+    fontWeight:'bold',
+    marginBottom:5,
+    marginTop:5,
+    alignSelf:'flex-start',
+    marginLeft:'10%'
+  },
 });
