@@ -8,7 +8,7 @@ const Elder_caretakers_card=(props)=>{
 
 <TouchableOpacity flex style={styles.homecard}>
           <Image style={styles.cardicon} source={props.img_src} />
-          <Text style={styles.card_text}>{props.caretaker_name}</Text>
+          <Text style={styles.card_text_elder}>{props.caretaker_name}</Text>
 </TouchableOpacity>
 
 
