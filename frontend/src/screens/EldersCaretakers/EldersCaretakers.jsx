@@ -25,7 +25,7 @@ const EldersCaretakers=({navigation})=>{
         try{      
             const response= await axios({
                 method: 'post',
-                url: baseUrl+'api/v0.1//elder-caretakers',
+                url: baseUrl+'api/v0.1/elder-caretakers',
                 headers:{'Content-Type': 'application/json','Authorization': 'Bearer ' + user_token},
                 data,
                 }).then(function (response) {
