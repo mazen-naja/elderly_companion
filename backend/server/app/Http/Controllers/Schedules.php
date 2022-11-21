@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Models\Item_type;
-
+use App\Models\Schedule;
+use App\Models\ScheduledItems;
 use Illuminate\Http\Request;
+use App\Setting;
 
-class schedules extends Controller
+
+class Schedules extends Controller
 {
   
 
@@ -94,7 +97,6 @@ class schedules extends Controller
 
 
 
-
     function createschedule(Reqeuest $request)
     {
         $data = $request->validate([
@@ -102,6 +104,7 @@ class schedules extends Controller
             'caretaker_id'=> 'required',
             'time_created'=> 'required',
             'is_visible'=> 'required',
+            'item_id'=> 'required',
         ]);
 
         $create_item=Schedule::create([
@@ -111,18 +114,43 @@ class schedules extends Controller
             'is_visible'=> $request->is_visible,
         ]);
 
+        $add_to_schedule=Schedule::create([
+            'item_id' => $request->item_id,
+        ]);
+
+
 
         return response()->json([
             "status" => "success",
-            "data" => $create_item
+            "data" => $create_item,
+            "added"=>$add_to_schedule
         ], 200);
     }
 
 
+
+
+ function getElderSchedule(Request $request)
+    {
+        $data = $request->validate([
+            'elder_id'=> 'required',
+        ]);
+
+
+        $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
+        ->join('items as it','it.id','=','item_id')
+        ->where('sd.elder_id',$request->elder_id)
+        ->get();
+        
+        return response()->json([
+            "status" => "success",
+            "data" => $items
+        ], 200);
+
+    }
+
+
 }
-
-
-    
 
 
 
