@@ -4,6 +4,8 @@ import { Text, View ,TouchableOpacity,Pressable, TextInput ,Image } from 'react-
 import styles from "../../../styles";
 import { caretakerlogin } from './caretakerslogin';
 import { useUserStore } from '../../store/UserStore';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from "../../../config/firebase";
 import axios from "axios";
 
 
@@ -47,6 +49,7 @@ const CaretakerLogin=({navigation})=>{
                  if (response.data.status === "success") {
                     saveUserId(response.data.user.id)
                     saveToken(response.data.authorisation.token);
+                    signInWithEmailAndPassword(auth, email, password)
                     // saveProfile(response.data.user.image);
                     saveType(response.data.user.user_type);
                     navigation.navigate("CaretakerHomepage")
