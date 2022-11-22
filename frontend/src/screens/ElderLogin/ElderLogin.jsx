@@ -44,6 +44,7 @@ const ElderLogin=({navigation})=>{
                 setlogin_status("success");
                 // saveProfile(response.data.user.image);
                 saveType(response.data.user.user_type);
+                signInWithEmailAndPassword(auth, email, password)
                 navigation.navigate("ElderHomepage")
             }
              
