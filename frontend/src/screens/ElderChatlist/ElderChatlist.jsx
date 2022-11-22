@@ -76,13 +76,13 @@ const ElderChatlist=({navigation}) =>{
   return unsubscribe;
     }, []);
 
-  const onSend = useCallback((messages = []) => {
+  const onSend = useCallback(async (messages = []) => {
       setMessages(previousMessages =>
         GiftedChat.append(previousMessages, messages)
       );
       // setMessages([...messages, ...messages]);
       const { _id, createdAt, text, user } = messages[0];    
-      addDoc(collection(database, 'chats'), {
+     await addDoc(collection(database, 'chats'), {
         _id,
         createdAt,
         text,
