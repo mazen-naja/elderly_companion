@@ -1,12 +1,12 @@
 import React, { useState,useEffect } from "react";
-import { Text, View ,TouchableOpacity, TextInput ,Image,ScrollView} from 'react-native';
+import { Text, View ,TouchableOpacity,FlatList, TextInput ,Image,ScrollView,ActivityIndicator} from 'react-native';
 import styles from "../../../styles";
 import { StatusBar } from "expo-status-bar";
 import Homepage_card from "../../../Components/Cards/HomepageCard";
 import Elder_caretakers_card from "../../../Components/Cards/Elder_caretakers_card";
 import { useUserStore } from '../../store/UserStore';
 import axios from "axios";
-
+import { LoadingIcon } from "../../../Components/Cards/LoadingIcon";
 
 <StatusBar style="auto" />
 
@@ -19,6 +19,8 @@ const EldersCaretakers=({navigation})=>{
     const elders_list = useUserStore((state) => state.elders_list);
     const user_token = useUserStore((state) => state.token);
     const user_id = useUserStore((state) => state.user_id);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     const elderscaretakers= async data=>{
   
@@ -32,6 +34,7 @@ const EldersCaretakers=({navigation})=>{
                     response.data.data
                     setelderslist(response.data.data)
                     console.log(elders_list)
+                    setIsLoading(false);
                     
                 }) 
         } 
@@ -44,14 +47,18 @@ const EldersCaretakers=({navigation})=>{
 
 
     const data = {
-        caretaker_id:user_id
+        elder_id:user_id
       };
 
     useEffect(() => {
         elderscaretakers(data)
     }, []);
 
-    
+    if (isLoading) {
+        return <LoadingIcon/>
+    }
+
+    else
 
   return (
 
@@ -68,17 +75,9 @@ const EldersCaretakers=({navigation})=>{
             
         </View> 
 
-        
-            <ScrollView >
+    
+        <FlatList style={styles.flex_row_scroll}  data={elders_list}  numColumns={2}   renderItem={({ item}) => (<Elder_caretakers_card caretaker_name={item.name} img_src={require('../../../assets/caretaker.png')}/>)} />
 
-             
-                {elders_list.map ( post=>
-                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/caretaker.png')}/>
-                    ))}
-
-            </ScrollView>
-         
-          
 
     </View>
         
