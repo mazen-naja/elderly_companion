@@ -6,7 +6,7 @@ import Homepage_card from "../../../Components/Cards/HomepageCard";
 import Elder_caretakers_card from "../../../Components/Cards/Elder_caretakers_card";
 import { useUserStore } from '../../store/UserStore';
 import axios from "axios";
-
+import { LoadingIcon } from "../../../Components/Cards/LoadingIcon";
 
 <StatusBar style="auto" />
 
@@ -19,7 +19,7 @@ const Caretakers_Elders=({navigation})=>{
     const elders_list = useUserStore((state) => state.elders_list);
     const user_token = useUserStore((state) => state.token);
     const user_id = useUserStore((state) => state.user_id);
-
+    const [isLoading, setIsLoading] = useState(true);
     const Cartaker_elders= async data=>{
   
         try{      
@@ -32,7 +32,7 @@ const Caretakers_Elders=({navigation})=>{
                     response.data.data
                     setelderslist(response.data.data)
                     console.log(elders_list)
-                    
+                    setIsLoading(false);
                 }) 
         } 
         catch(error){
@@ -52,7 +52,11 @@ const Caretakers_Elders=({navigation})=>{
     }, []);
 
     
-
+  if (isLoading) {
+    return <LoadingIcon/>
+}
+else
+ 
   return (
 
     <View style={styles.home_container}>
@@ -68,15 +72,13 @@ const Caretakers_Elders=({navigation})=>{
             
         </View> 
 
-        
-            <ScrollView >
-
-             
+            <ScrollView > 
+            <View style={styles.flex_homerow2}>
+              
                 {elders_list.map ( post=>
-                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>
-                    ))}
-
-            </ScrollView>
+                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>))} 
+                    </View> 
+             </ScrollView>
          
           
 
