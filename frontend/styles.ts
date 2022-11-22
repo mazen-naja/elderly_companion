@@ -429,8 +429,10 @@ export default StyleSheet.create({
   },
 
   flex_row_scroll:{
-    // flex:1,
-    flexDirection:'row'
+    flex:1,
+    flexDirection:'column',
+    width:'90%',
+    
     
   },
 
@@ -452,4 +454,11 @@ export default StyleSheet.create({
     alignSelf:'flex-start',
     marginLeft:'10%'
   },
+
+  centerloading:{
+    flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+  },
+
 });
