@@ -9,9 +9,10 @@ class ScheduledItems extends Model
 {
     use HasFactory;
     protected $fillable = [
-    
+        'schedule_id',
+        'item_id'
 ];
 
-
+    public $timestamps = false;
     protected $table='scheduled_items';
 }
