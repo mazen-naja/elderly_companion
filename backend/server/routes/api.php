@@ -16,6 +16,7 @@ Route::post('/elder-schedule', [Schedules::class,'getElderSchedule']);
 Route::post('/elder-create-schedule', [Schedules::class,'createschedule']);
 Route::post('/caretaker-schedule', [Schedules::class,'getCaretakerSchedule']);
 
+
 Route::post('/elder-request', [EldersCaretakers::class,'elder_send_request']);
 Route::post('/elder-request-accept', [EldersCaretakers::class,'elder_accept_request']);
 Route::post('/caretaker-request', [EldersCaretakers::class,'caretaker_send_request']);
@@ -29,9 +30,7 @@ Route::post('/caretaker-elders-requests', [EldersCaretakers::class,'getCaretaker
 
 });
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
