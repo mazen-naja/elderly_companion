@@ -97,7 +97,7 @@ class Schedules extends Controller
 
 
 
-    function createschedule(Reqeuest $request)
+    function createschedule(Request $request)
     {
         $data = $request->validate([
             'elder_id'=> 'required',
@@ -114,8 +114,15 @@ class Schedules extends Controller
             'is_visible'=> $request->is_visible,
         ]);
 
-        $add_to_schedule=Schedule::create([
+        $schedule_id=Schedule::where('time_created',$request->time_created)
+        ->where('elder_id',$request->elder_id)
+        ->get('id');
+
+        $extracted_id=$schedule_id->first()->id;
+
+        $add_to_schedule=ScheduledItems::create([
             'item_id' => $request->item_id,
+            'schedule_id' =>$extracted_id,
         ]);
 
 
@@ -123,7 +130,8 @@ class Schedules extends Controller
         return response()->json([
             "status" => "success",
             "data" => $create_item,
-            "added"=>$add_to_schedule
+            "added"=>$add_to_schedule,
+            "Schedule_id"=>$extracted_id
         ], 200);
     }
 
@@ -140,6 +148,29 @@ class Schedules extends Controller
         $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
         ->join('items as it','it.id','=','item_id')
         ->where('sd.elder_id',$request->elder_id)
+        ->get();
+        
+        return response()->json([
+            "status" => "success",
+            "data" => $items
+        ], 200);
+
+    }
+
+
+
+
+    function getCaretakerSchedule(Request $request)
+    {
+        $data = $request->validate([
+            'caretaker_id'=> 'required',
+        ]);
+
+
+        $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
+        ->join('items as it','it.id','=','item_id')
+        // ->join('users as u','u.id','=','sd.elder_id')
+        ->where('sd.caretaker_id',$request->caretaker_id)
         ->get();
         
         return response()->json([
