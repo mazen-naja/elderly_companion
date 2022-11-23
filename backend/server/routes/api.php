@@ -13,6 +13,8 @@ Route::get('/item/{item}', [Schedules::class,'getItem']);
 Route::post('/create-item', [Schedules::class,'createItem']);
 Route::post('/medicines', [Schedules::class,'getMedicines']);
 Route::post('/elder-schedule', [Schedules::class,'getElderSchedule']);
+Route::post('/elder-notifications', [Schedules::class,'getElderNotificationHistory']);
+Route::post('/elder-sendtonotifications', [Schedules::class,'sendtoElderNotificationHistory']);
 Route::post('/elder-create-schedule', [Schedules::class,'createschedule']);
 Route::post('/caretaker-schedule', [Schedules::class,'getCaretakerSchedule']);
 

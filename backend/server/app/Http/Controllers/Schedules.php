@@ -148,6 +148,7 @@ class Schedules extends Controller
         $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
         ->join('items as it','it.id','=','item_id')
         ->where('sd.elder_id',$request->elder_id)
+        ->where('is_visible',1)
         ->get();
         
         return response()->json([
@@ -156,6 +157,42 @@ class Schedules extends Controller
         ], 200);
 
     }
+
+
+
+    function getElderNotificationHistory(Request $request)
+    {
+        $data = $request->validate([
+            'elder_id'=> 'required',
+        ]);
+
+
+        $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
+        ->join('items as it','it.id','=','item_id')
+        ->where('sd.elder_id',$request->elder_id)
+        ->where('is_visible',0)
+        ->get();
+        
+        return response()->json([
+            "status" => "success",
+            "data" => $items
+        ], 200);
+
+    }
+
+    function sendtoElderNotificationHistory(Request $request)
+    {
+        $data = $request->validate([
+            'id'=> 'required',
+        ]);
+
+
+        $items=Schedule::where('id',$request->id)
+        ->update(['is_visible' => 0]);
+
+    }
+
+
 
 
 

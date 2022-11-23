@@ -11,7 +11,7 @@ const RoleScreen=({navigation})=>{
     <View style={styles.container}>
       <Image style={styles.tinyLogo} source={require('../../../assets/logo.jpeg')} />
       <Text style={styles.text_title}>Elderly Companion</Text>
-      <Text style={styles.text_subtitle}>Choose role</Text>
+      <Text style={styles.text_subtitle}>Who are you?</Text>
       <TouchableOpacity onPress={() => navigation.navigate("ElderLogin")} style={styles.button}>
                   <Text style={styles.role_text}>Elder</Text>
       </TouchableOpacity>
