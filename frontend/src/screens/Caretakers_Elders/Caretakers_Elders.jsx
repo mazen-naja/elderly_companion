@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import { Text, View ,TouchableOpacity, TextInput ,Image,ScrollView} from 'react-native';
+import { Text, View ,TouchableOpacity, FlatList ,Image,ScrollView} from 'react-native';
 import styles from "../../../styles";
 import { StatusBar } from "expo-status-bar";
 import Homepage_card from "../../../Components/Cards/HomepageCard";
@@ -71,16 +71,8 @@ else
             </TouchableOpacity>
             
         </View> 
-
-            <ScrollView > 
-            <View style={styles.flex_homerow2}>
-              
-                {elders_list.map ( post=>
-                    (<Elder_caretakers_card caretaker_name={post.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>))} 
-                    </View> 
-             </ScrollView>
          
-          
+         <FlatList style={styles.flex_row_scroll}  data={elders_list}  numColumns={2}   renderItem={({ item}) => (<Elder_caretakers_card caretaker_name={item.name} img_src={require('../../../assets/oldmanicon.jpeg')}/>)} />
 
     </View>
         
