@@ -16,4 +16,5 @@ class Schedule extends Model
             'is_visible'  ,
     ];
     protected $table='schedules';
+    public $timestamps = false;
 }
