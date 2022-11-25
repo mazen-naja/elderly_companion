@@ -31,8 +31,8 @@ class Schedules extends Controller
         $items=Item::join('item_type as it' ,'it.id' ,'=','item_type_id')
         ->where('items.elder_id',$request->elder_id)
         ->where('it.name','Medicine')
-        ->get();
-        
+        // ->get('it.name','it.times_needed');
+        ->get(['items.id','items.name','items.times_needed']);
         return response()->json([
             "status" => "success",
             "data" => $items
@@ -55,7 +55,31 @@ class Schedules extends Controller
 
 
 
-    function createItem(Reqeuest $request)
+    function createItem(Request $request)
+    {
+        $data = $request->validate([
+            'name'=> 'required',
+            'times_needed'=> 'required',
+            'elder_id'=> 'required',
+            'item_type_id'=> 'required'
+        ]);
+
+        $create_item=Item::create([
+            'name' => $request->name,
+            'times_needed' => $request->times_needed,
+            'elder_id' => $request->elder_id,
+            'item_type_id'=> $request->item_type_id
+        ]);
+
+
+        return response()->json([
+            "status" => "success",
+            "data" => $create_item
+        ], 200);
+    }
+
+
+    function createMedicine(Request $request)
     {
         $data = $request->validate([
             'name'=> 'required',
@@ -180,6 +204,9 @@ class Schedules extends Controller
 
     }
 
+
+
+    
     function sendtoElderNotificationHistory(Request $request)
     {
         $data = $request->validate([
@@ -208,6 +235,30 @@ class Schedules extends Controller
         ->join('items as it','it.id','=','item_id')
         // ->join('users as u','u.id','=','sd.elder_id')
         ->where('sd.caretaker_id',$request->caretaker_id)
+        ->where('sd.is_visible',1)
+        ->get();
+        
+        return response()->json([
+            "status" => "success",
+            "data" => $items
+        ], 200);
+
+    }
+
+    function getCaretakernotifications(Request $request)
+    {
+        $data = $request->validate([
+            'caretaker_id'=> 'required',
+        ]);
+
+
+        $items=ScheduledItems::join('schedules as sd','sd.id','=','schedule_id')
+        ->join('items as it','it.id','=','item_id')
+        ->leftjoin('elders_caretakers as ed','ed.elder_id','=','sd.elder_id')
+        // ->where('elders_caretakers as ed','ed.caretaker_id',$request->caretaker_id)
+        ->where('ed.caretaker_id','=',$request->caretaker_id)
+        // ->where('sd.caretaker_id','=',"10")
+        ->where('sd.is_visible','0')
         ->get();
         
         return response()->json([
