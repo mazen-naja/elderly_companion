@@ -15,10 +15,13 @@ Route::post('/medicines', [Schedules::class,'getMedicines']);
 Route::post('/elder-schedule', [Schedules::class,'getElderSchedule']);
 Route::post('/elder-notifications', [Schedules::class,'getElderNotificationHistory']);
 Route::post('/elder-sendtonotifications', [Schedules::class,'sendtoElderNotificationHistory']);
+Route::post('/elder-notifications', [Schedules::class,'getElderNotificationHistory']);
 Route::post('/elder-create-schedule', [Schedules::class,'createschedule']);
+Route::post('/elder-createmedicine', [Schedules::class,'createMedicine']);
+
+
 Route::post('/caretaker-schedule', [Schedules::class,'getCaretakerSchedule']);
-
-
+Route::post('/caretaker-notifications', [Schedules::class,'getCaretakernotifications']);
 Route::post('/elder-request', [EldersCaretakers::class,'elder_send_request']);
 Route::post('/elder-request-accept', [EldersCaretakers::class,'elder_accept_request']);
 Route::post('/caretaker-request', [EldersCaretakers::class,'caretaker_send_request']);
