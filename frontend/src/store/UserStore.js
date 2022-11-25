@@ -13,13 +13,18 @@ const useStore = create(
             login_state:"",
             elder_schedule_list:"",
             CaretakerSchedule:"",
+            notificationslist:"",
+            scheduled_date:"",
+            droplist:[],
 
+
+            setDroplist: (droplisting) => set((state) => ({ setDroplist: droplisting })),
             setLoginStatus: (login_status) => set((state) => ({ login_state: login_status })),
             setUser: (user) => set((state) => ({ user_id: user })),
             setProfile: (pic) => set((state) => ({ profile_picture: pic })),
             setToken: (tkn) => set((state) => ({ token: tkn })),
             setUsertype: (usrtype) => set((state) => ({ usertype: usrtype })),
-            
+            setEldernotifications: (notification) => set((state) => ({ notificationslist: notification })),
             setCaretakerSchedule: (caretaker_schedule) => set((state) => ({ CaretakerSchedule: caretaker_schedule })),
 
             setEldersList: (arr) => set((state) => ({ elders_list: arr })),
