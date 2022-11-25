@@ -8,13 +8,13 @@ import { useUserStore } from '../../store/UserStore';
 import axios from "axios";
 import { LoadingIcon } from "../../../Components/Cards/LoadingIcon";
 
-<StatusBar style="auto" />
+
 
 const baseUrl = 'http://192.168.1.6:8000/';
 
 
 const EldersCaretakers=({navigation})=>{
-
+    
     const setelderslist=useUserStore((state) => state.setEldersList);
     const elders_list = useUserStore((state) => state.elders_list);
     const user_token = useUserStore((state) => state.token);
@@ -61,7 +61,8 @@ const EldersCaretakers=({navigation})=>{
     else
 
   return (
-
+        <>
+    <StatusBar style='auto' />
     <View style={styles.home_container}>
       
         <Image style={styles.tinyLogo} source={require('../../../assets/caretakers.png')} />
@@ -70,7 +71,7 @@ const EldersCaretakers=({navigation})=>{
         <View style={styles.flex_row_subtitle} >
             <Text style={styles.chat_subtitle}>Caretakers' list</Text> 
             <TouchableOpacity style={styles.subtitle_button}>
-                <Text >ADD</Text>
+                <Text style={styles.buttontext} >Add</Text>
             </TouchableOpacity>
             
         </View> 
@@ -80,7 +81,7 @@ const EldersCaretakers=({navigation})=>{
 
 
     </View>
-        
+    </>
   );
 };
 
