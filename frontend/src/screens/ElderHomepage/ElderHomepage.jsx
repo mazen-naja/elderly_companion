@@ -4,15 +4,15 @@ import styles from "../../../styles";
 import { StatusBar } from 'expo-status-bar';
 import Homepage_card from "../../../Components/Cards/HomepageCard";
 
-<StatusBar style="auto" />
+
 
 const ElderHomepage=({navigation})=>{
 
   return (
     <View style={styles.home_container}>
-      
+      <StatusBar style="auto" />
       <Image style={styles.tinyLogo} source={require('../../../assets/oldmanicon.jpeg')} />
-      <Text style={styles.text_title}>Welcome Elder !</Text>
+      <Text style={styles.text_title}>Welcome Elder</Text>
       
           <View style={styles.flex_homerow2}>
 
@@ -27,8 +27,8 @@ const ElderHomepage=({navigation})=>{
 
             
               {/* <Homepage_card card_text={'Medicines'} img_src={require('../../../assets/medicines.jpeg')} /> */}
-              <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("Medicines")}>
-                <View >
+              <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("MedicinesScreen")}>
+                <View>
                     <Image style={styles.cardicon} source={require('../../../assets/medicines.jpeg')}/>
                 </View>
                 <Text style={styles.card_hometext}>Medicines</Text>
@@ -61,7 +61,18 @@ const ElderHomepage=({navigation})=>{
 
           <View style={styles.flex_homerow2}>
             <Homepage_card card_text={'Edit profile'} img_src={require('../../../assets/editprofile.jpg')} />
-            <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')} />
+
+
+
+            {/* <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')} /> */}
+            <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("Notifications")}>
+                <View >
+                    <Image style={styles.cardicon} source={require('../../../assets/notificationsicon.png')}/>
+                </View>
+                <Text style={styles.card_hometext}>Notifications</Text>
+            </TouchableOpacity>
+
+
           </View>
     </View>
   );
