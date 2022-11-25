@@ -13,29 +13,135 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
 
-  text_label2:{
-    marginLeft:50,
-    width:'35%',
-    fontSize:12,
-    marginBottom:5
-  },
-
+ 
   input2: {
-    width:'15%',
+    width:'1%',
     height: 40,
-    paddingLeft:15,
+    // paddingLeft:15,
     borderColor: '#1A75BC',
     backgroundColor:'white',
     borderRadius:25,
-    borderWidth: 1,
-    marginRight:'20%',
-    marginLeft:'10%'
+    borderWidth: 0.5,
+     marginRight:'5%',
+     marginLeft:'5%'
  },
 
  flex_row2: {
   flexDirection:'row',
   marginBottom:15
 },
+
+
+  
+
+  sign_text:{
+    fontSize:16,
+    fontWeight:"bold",
+    color:'white'
+  },
+
+  sign_button:{
+    justifyContent: 'center',
+    alignItems:'center',
+    marginTop:20,
+    marginBottom:10,
+    width:'90%',
+    height: 50,
+    borderRadius: 10,
+    borderBottomWidth:1,
+    borderRightWidth:1,
+    borderLeftWidth:1,
+    borderTopWidth:1,
+    backgroundColor:'#1A75BC',
+    borderColor:'#1A75BC',
+    color:'white',
+    fontWeight:'bold',
+    elevation: 3,
+    
+  },
+
+
+  text_title:{
+    fontSize:26,
+    fontWeight:"bold",
+    marginBottom:10,
+    color:'#1A75BC'
+  },
+
+  text_subtitle:{
+    fontSize:20,
+    fontWeight:"bold",
+    marginBottom:50
+  },
+
+
+  //Role screen
+
+  begincontainer: {
+    marginTop:30,
+    flex: 1,
+    backgroundColor: '#F3F2F2',
+    alignItems: 'center',
+    
+  },
+  centercontainer:{
+    marginTop:30,
+    flex: 1,
+    backgroundColor: '#F3F2F2',
+    alignItems: 'center',
+    justifyContent:'center'
+  },
+  role_text_subtitle:{
+    fontSize:20,
+    marginBottom:50,
+    color:'#1A75BC',
+    opacity:0.5
+  },
+
+
+  role_text:{
+    fontSize:28,
+    fontWeight:"bold",
+    opacity:0.2,
+    position: 'absolute',
+  },
+
+  role_text_box:{
+    top: 0,
+    left:0,
+    right:0,
+    bottom:0,
+    width:'100%',
+    height:'100%',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+
+  background_image:{
+      width:'100%',
+      height:'100%',
+      opacity:0.5,
+      resizeMode: "cover",   
+      position: 'absolute', 
+      padding:5 ,
+      top:5 
+  },
+
+  role_button:{
+    justifyContent: 'center',
+    alignItems:'center',
+    marginTop:5,
+    marginBottom:45,
+    width:'60%',
+    height:'25%',
+    // overflow : "hidden",
+
+    backgroundColor:'white',
+    // borderColor:'#1A75BC',
+    elevation: 3,
+    
+  },
+
 
 
   button:{
@@ -58,47 +164,33 @@ export default StyleSheet.create({
     
   },
 
-  sign_text:{
-    fontSize:16,
-    fontWeight:"bold",
-    color:'white'
-  },
 
-  sign_button:{
-    justifyContent: 'center',
-    alignItems:'center',
-    marginBottom:25,
-    width:'70%',
-    height: 40,
-    borderRadius: 23,
-    borderBottomWidth:1,
-    borderRightWidth:1,
-    borderLeftWidth:1,
-    borderTopWidth:1,
-    backgroundColor:'#1A75BC',
-    borderColor:'#1A75BC',
-    color:'white',
-    fontWeight:'bold',
-    elevation: 3,
+
+  loglabel:{
+    width:'90%',
+    fontSize:12,
+    marginBottom:5,
+    marginLeft:5,
     
   },
 
-  role_text:{
-    fontSize:16,
-    fontWeight:"bold"
+  text_label2:{
+    marginLeft:0,
+    width:'50%',
+    fontSize:12,
+    marginBottom:5,
+    // marginRight:'5%'
   },
 
-  text_title:{
-    fontSize:24,
-    fontWeight:"bold",
-    marginBottom:16
+  text_label3:{
+    marginLeft:0,
+    width:'40%',
+    fontSize:12,
+    marginBottom:5,
+    // marginRight:'5%'
+
   },
 
-  text_subtitle:{
-    fontSize:20,
-    fontWeight:"bold",
-    marginBottom:50
-  },
 
   text_label:{
     width:'70%',
@@ -117,24 +209,165 @@ export default StyleSheet.create({
   },
 
   input: {
-    width:'70%',
-    height: 40,
+    width:'90%',
+    height: 45,
     paddingLeft:15,
     borderColor: '#1A75BC',
     backgroundColor:'white',
-    borderRadius:25,
+    borderRadius:10,
     borderWidth: 1,
-    marginBottom:25
+    marginBottom:10
  },
+
+//  Medicines
+Medicinecontainer: {
+  marginTop:'40%',
+  flex: 1,
+  backgroundColor: '#F3F2F2',
+  alignItems: 'center',
+  
+},
+
+
+flex_row_items:{
+flexDirection:'row',
+// justifyContent:'center',
+// alignContent:'center',
+// width:'50%'
+
+},
+
+scheduleaddcontainer:{
+flexDirection:'column',
+width:'100%',
+marginLeft:'5%',
+justifyContent:'center',
+alignContent:'center'
+
+},
+
+addschedulelabel:{
+  width:'40%',
+  fontSize:12,
+  marginBottom:5,
+  // marginLeft:'15%',
+  
+},
+
+flex_col_items:{
+  marginTop:5,
+  flexDirection:'column',
+  // marginRight:'60%',
+  width:'90%',
+  marginLeft:'10%'
+
+},
+
+medicinelabel:{
+  width:'40%',
+  fontSize:12,
+  marginBottom:5,
+  marginLeft:'15%',
+  
+},
+medicinetimelabel:{
+  width:'40%',
+  fontSize:12,
+  marginBottom:5,
+  marginLeft:'15%',
+  
+},
+
+input_font:{
+  fontSize:15
+},
+ input_times_needed: {
+  width:'25%',
+  height: 45,
+  paddingLeft:15,
+  borderColor: '#1A75BC',
+  backgroundColor:'white',
+  borderRadius:10,
+  borderWidth: 1,
+  marginBottom:10,
+  // marginRight:'15%',
+  marginLeft:"15%"
+},
+input_addschedule: {
+  width:'40%',
+  height: 45,
+  paddingLeft:15,
+  borderColor: '#1A75BC',
+  backgroundColor:'white',
+  borderRadius:10,
+  borderWidth: 1,
+  marginBottom:10,
+  justifyContent:'center',
+  fontSize:18
+},
+
+input_addschedule_name: {
+  width:'80%',
+  height: 45,
+  paddingLeft:15,
+  borderColor: '#1A75BC',
+  backgroundColor:'white',
+  borderRadius:10,
+  borderWidth: 1,
+  marginBottom:10,
+  justifyContent:'center'
+},
+
+
+press_input: {
+  width:'50%',
+  height: 45,
+  paddingLeft:15,
+  borderColor: '#1A75BC',
+  backgroundColor:'white',
+  borderRadius:10,
+  borderWidth: 1,
+  marginBottom:10,
+  alignContent:'center',
+  justifyContent:'center',
+  marginLeft:"15%"
+},
 
   tinyLogo: {
     width: 59,
     height: 59,
     borderRadius:76/2,
     borderColor:"#1A75BC",
+    // borderWidth:1,
+    marginTop:40,
+    marginBottom:20,
+
+  },
+
+
+  loginLogo: {
+    width: 76,
+    height: 76,
+    borderRadius:76/2,
+    borderColor:"#1A75BC",
     borderWidth:1,
     marginTop:10,
     marginBottom:20
+  },
+
+  role_logo: {
+    width: 120,
+    height: 120,
+    borderRadius:120/2,
+    borderColor:"#1A75BC",
+    borderWidth:1,
+    marginTop:20,
+    marginBottom:20
+  },
+  signuplogo:{
+    width: 200,
+    height: 200,
+    borderRadius:200/2,
   },
 
 
@@ -146,8 +379,9 @@ export default StyleSheet.create({
 // Card Styles
   flex_row3: {
     flexDirection:'row',
-    marginLeft:'21%',
-    alignContent:'flex-start'
+    justifyContent:'space-between',
+    marginLeft:35
+    // alignContent:'flex-start',
    
     
   },
@@ -159,21 +393,16 @@ export default StyleSheet.create({
   },
   flex_column: {
     flexDirection:'column',
-    marginLeft:'2%',
-    marginRight:'2%',
+    marginLeft:'10%',
+    marginRight:'10%',
+    marginBottom:10,
     backgroundColor:'white',
     
     
   },
 
-  card_text:{
-    
-    width:'50%',
-    fontSize:14,
-    fontWeight:"bold",
-    color:'black'
-    
-  },
+
+
   card_title:{
     width:'40%',
     fontSize:16,
@@ -183,13 +412,57 @@ export default StyleSheet.create({
     alignSelf:'flex-start',
     marginLeft:'3%'
   },
+  card_text:{  
+    width:'50%',
+    fontSize:14,
+    fontWeight:"bold",
+    color:'black' ,
+    paddingTop:'2%',
+    
+  },
+
+
+  flex_column_medicines: {
+    flexDirection:'column',
+    // marginLeft:'5%',
+    // marginRight:'5%',
+    marginBottom:10,
+    backgroundColor:'white',
+    width:'95%',
+    height:120
+    
+  },
+  card_text_medicines:{  
+    width:'90%',
+    fontSize:18,
+    fontWeight:"bold",
+    color:'black' ,
+    paddingTop:'2%',
+    marginBottom:30,
+    marginLeft:20,
+    
+  },
+
+  card_text_reg_med:{
+    width:'90%',
+    fontSize:16,
+    color:'black',
+    marginLeft:20,
+    marginBottom:30
+    // paddingBottom:30
+    
+  },
+
+
   
   card_text_upper:{
-    marginLeft:'15%',
-    width:'40%',
+    // marginLeft:'15%',
+    width:'50%',
     fontSize:14,
     fontWeight:"bold",
     color:'black',
+    paddingTop:'2%',
+  
   },
   card_text_reg:{
     width:'40%',
@@ -225,14 +498,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems:'center',
     margin:5,
-    paddingVertical: 16,
+    // paddingVertical: 16,
     width:200,
     height:200,
-    borderRadius: 4,
-    borderBottomWidth:1,
-    borderRightWidth:1,
-    borderLeftWidth:1,
-    borderTopWidth:1,
+    borderRadius: 20,
     backgroundColor:'white',
     borderColor:'#1A75BC',
     elevation: 3,
@@ -242,10 +511,10 @@ export default StyleSheet.create({
   cardicon: {
     width: 87,
     height: 87,
-    borderRadius:76/2,
     borderColor:"#1A75BC",
-    padding:25,
+    padding:50,
     resizeMode: 'contain',
+    
     
   },
 
@@ -255,7 +524,7 @@ export default StyleSheet.create({
   // Elder homepage
   home_container: {
     flex: 1,
-    margin:5,
+    // margin:5,
     backgroundColor: '#F3F2F2',
     alignItems: 'center',
     flexDirection:'column'
@@ -269,11 +538,18 @@ export default StyleSheet.create({
 
   flex_homerow2: {
     flexDirection:'row',
+    padding:5
   },
+
+  flex_schedule_row:{
+    flexDirection:'row',
+    padding:10
+  },
+
   card_hometext:{
     marginTop:15,
-    fontSize:14,
-    fontWeight:"bold",
+    fontSize:16,
+    // fontWeight:"bold",
     color:'black'
     
   },
@@ -370,6 +646,7 @@ export default StyleSheet.create({
   flex_row_subtitle:{
     marginTop:20,
     marginBottom:20,
+    padding:7,
     flexDirection:'row',
     justifyContent:'flex-start',
     alignContent:'flex-start',
@@ -385,6 +662,19 @@ export default StyleSheet.create({
     
   },
 
+  flex_column_schedule:{
+    padding:5,
+    flexDirection:'column',
+    flex:1
+
+  },
+
+  scheduleview:{
+    padding:5,
+
+
+  },
+
   subtitle_button:{
     justifyContent: 'center',
     alignItems:'center',
@@ -395,12 +685,18 @@ export default StyleSheet.create({
     borderRightWidth:1,
     borderLeftWidth:1,
     borderTopWidth:1,
-    backgroundColor:'white',
+    backgroundColor:'#1A75BC',
     borderColor:'#1A75BC',
     color:'white',
     fontWeight:'bold',
     elevation: 3,
     
+    
+  },
+
+  buttontext:{
+    
+    color:'white'
   },
 
   chathead: {
@@ -418,15 +714,19 @@ export default StyleSheet.create({
   // }
 
 
-  flex_column_schedule: {
+
+
+
+  flex_column_notifications: {
     flexDirection:'column',
     marginLeft:'2%',
-    marginRight:'2%',
+    // marginRight:'2%',
     marginBottom:5,
     backgroundColor:'white',
     
     
   },
+
 
   flex_row_scroll:{
     flex:1,
@@ -441,7 +741,8 @@ export default StyleSheet.create({
     
     fontSize:14,
     fontWeight:"bold",
-    color:'black'
+    color:'black',
+    marginTop:15
     
   },
   card_title_sched:{
@@ -461,4 +762,19 @@ export default StyleSheet.create({
         justifyContent: "center",
   },
 
+
+  // Notifications 
+  notfication_subtitle:{
+    fontSize:20,
+    fontWeight:"bold",
+    width:'100%',
+    marginLeft:'5%',
+  },
+
+  card_label_notifications:{
+    width:'40%',
+    fontSize:14,
+    color:'black',
+    marginLeft:'5%',
+  },
 });
