@@ -59,13 +59,20 @@ const CaretakerHomepage=({navigation})=>{
 
 
         <View style={styles.flex_homerow2}>
-          <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')}/>
-
+          {/* <Homepage_card card_text={'Notifications'} img_src={require('../../../assets/notificationsicon.png')}/> */}
+          <TouchableOpacity  style={styles.homecard} onPress={() =>  navigation.navigate("CaretakerNotificationsScreen")}>
+                <View >
+                    <Image style={styles.cardicon} source={require('../../../assets/notificationsicon.png')} />
+                </View>
+                <Text style={styles.card_hometext}>Notifications</Text>
+            </TouchableOpacity>
+        </View>
 
 
 
           
-        </View>
+          
+       
   </View>
   );
 
