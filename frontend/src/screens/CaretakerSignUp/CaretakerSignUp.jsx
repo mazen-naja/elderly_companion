@@ -140,15 +140,13 @@ const CaretakerSignUp=({navigation})=>{
 
     <>
     <StatusBar style="auto" />  
-   <View style={styles.container}>
-       <Image style={styles.tinyLogo} source={require('../../../assets/logo.jpeg')} />
-       <Text style={styles.text_title}>Elderly Companion</Text>
-       <Text style={styles.text_subtitle}>Caretaker Sign up</Text>
-       <Text style={styles.text_label}>Full name</Text>
+   <View style={styles.centercontainer}>
+       <Text style={styles.role_text_subtitle}>Sign up</Text>
+       <Text style={styles.loglabel}>Full name</Text>
        <TextInput style={styles.input} onChangeText={onnamechange} />
-       <Text style={styles.text_label}>Email</Text>
+       <Text style={styles.loglabel}>Email</Text>
        <TextInput style={styles.input} onChangeText={onemailchange}/>
-       <Text style={styles.text_label}>Password</Text>
+       <Text style={styles.loglabel}>Password</Text>
        <TextInput style={styles.input} onChangeText={onpasswordchange} />
        <View style={styles.flex_row}>
            <Text style={styles.text_label2}>Gender</Text>
