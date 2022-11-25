@@ -14,7 +14,7 @@ import registerNNPushToken from 'native-notify';
 
 const baseUrl = 'http://192.168.1.6:8000/';
 
-const ElderScheduleScreen=()=>{
+const ElderScheduleScreen=({navigation})=>{
   registerNNPushToken(4929, 'oUMoAxXaGp5JtxmEshw8Ud'); 
   const setElderSchedule=useUserStore((state) => state.setElderSchedule);
   const elder_schedule_list = useUserStore((state) => state.elder_schedule_list);
@@ -133,6 +133,7 @@ const ElderScheduleScreen=()=>{
 
 
   else{
+
     timenotify()
 
     return (
@@ -143,15 +144,16 @@ const ElderScheduleScreen=()=>{
        
       <View style={styles.flex_row_subtitle} >
         <Text style={styles.chat_subtitle}>Today's Schedule</Text> 
-      <TouchableOpacity style={styles.subtitle_button}><Text >ADD</Text></TouchableOpacity>
-      </View>
+      <TouchableOpacity style={styles.subtitle_button} onPress={() =>  navigation.navigate("AddScheduleScreen")}><Text style={styles.buttontext} >Add</Text></TouchableOpacity>
+      </View >
+      <View style={styles.scheduleview} >
       {elder_schedule_list.map ( post=>                   
-            <>     
+                
            <Schedule_card text={post.name} start={post.time_created.toString().substring(10,16).split(":").join().replace(",","")} time={post.time_created.toString().substring(10,16)} img_src={require('../../../assets/medicines.jpeg')} />
-           </>
+           
                     
       )}
-      
+     </View>
     </View>
 
     
