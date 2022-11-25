@@ -67,7 +67,7 @@ else
         <View style={styles.flex_row_subtitle} >
             <Text style={styles.chat_subtitle}>Elders' list</Text> 
             <TouchableOpacity style={styles.subtitle_button}>
-                <Text >ADD</Text>
+                <Text style={styles.buttontext} >Add</Text>
             </TouchableOpacity>
             
         </View> 
