@@ -12,8 +12,8 @@ class Item extends Model
         'name',
         'times_needed',
         'elder_id',
-        'item_type'
+        'item_type_id'
     ];
-
+    public $timestamps = false;
     protected $table='items';
 }
