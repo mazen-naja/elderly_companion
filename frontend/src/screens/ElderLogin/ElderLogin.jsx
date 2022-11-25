@@ -90,19 +90,19 @@ catch(error){
 
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.tinyLogo} source={require('../../../assets/logo.jpeg')} />
+    <View style={styles.begincontainer}>
+      <Image style={styles.role_logo} source={require('../../../assets/logo.jpeg')} />
       <Text style={styles.text_title}>Elderly Companion</Text>
-      <Text style={styles.text_subtitle}>Elder log in</Text>
-      <Text style={styles.text_label}>Email</Text>
-      <TextInput style={styles.input} value={email} onChangeText={onemailchange} />
-      <Text style={styles.text_label}>Password</Text>
-      <TextInput style={styles.input} value={password} secureTextEntry   onChangeText={setPassword}/>
+      <Text style={styles.role_text_subtitle}>Log in</Text>
+      <Text style={styles.loglabel}>Email</Text>
+      <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={onemailchange} />
+      <Text style={styles.loglabel}>Password</Text>
+      <TextInput style={styles.input} value={password} secureTextEntry   onChangeText={setPassword} placeholder="Password"/>
       <TouchableOpacity style={styles.sign_button} onPress={signinHandler}>
-                  <Text style={styles.sign_text}>Sign in</Text>
+                  <Text style={styles.sign_text}>Log in</Text>
       </TouchableOpacity>
       <Pressable  onPress={() => {navigation.navigate("ElderSignUp")}}>
-      <Text style={styles.text_body}>Don't have an account ? <Text style={styles.text_hyper}>Sign up</Text></Text>
+      <Text style={styles.text_body}>Don't have an account ? <Text style={styles.text_hyper}>Register</Text></Text>
       </Pressable>
       
     </View>
