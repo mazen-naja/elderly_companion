@@ -36,26 +36,6 @@ const ElderChatlist=({navigation}) =>{
 
 
   const [messages, setMessages] = useState([]);
-  // const navigation = useNavigation();
-
-  const onSignOut = () => {
-    signOut(auth).catch(error => console.log('Error logging out: ', error));
-  };
-
-  useLayoutEffect(() => {
-      navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            style={{
-              marginRight: 10
-            }}
-            onPress={onSignOut}
-          >
-            <AntDesign name="logout" size={24} style={{marginRight: 10}}/>
-          </TouchableOpacity>
-        )
-      });
-    }, []);
 
   useLayoutEffect(() => {
 
@@ -81,7 +61,8 @@ const ElderChatlist=({navigation}) =>{
         GiftedChat.append(previousMessages, messages)
       );
       // setMessages([...messages, ...messages]);
-      const { _id, createdAt, text, user } = messages[0];    
+      const { _id, createdAt, text, user } = messages[0];  
+
      await addDoc(collection(database, 'chats'), {
         _id,
         createdAt,
@@ -91,14 +72,10 @@ const ElderChatlist=({navigation}) =>{
     }, []);
 
     return (
-      // <>
-      //   {messages.map(message => (
-      //     <Text key={message._id}>{message.text}</Text>
-      //   ))}
-      // </>
       <GiftedChat
         messages={messages}
-        showAvatarForEveryMessage={false}
+        renderAvatar={() => null}
+        showAvatarForEveryMessage={true}
         showUserAvatar={false}
         onSend={messages => onSend(messages)}
         messagesContainerStyle={{
