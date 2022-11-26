@@ -293,6 +293,20 @@ input_font:{
   // marginRight:'15%',
   marginLeft:"15%"
 },
+
+input_medicinename: {
+  width:'40%',
+  height: 45,
+  paddingLeft:15,
+  borderColor: '#1A75BC',
+  backgroundColor:'white',
+  borderRadius:10,
+  borderWidth: 1,
+  marginBottom:10,
+
+},
+
+
 input_addschedule: {
   width:'40%',
   height: 45,

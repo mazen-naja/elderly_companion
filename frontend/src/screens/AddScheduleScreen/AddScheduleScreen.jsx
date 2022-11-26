@@ -29,7 +29,7 @@ const AddScheduleScreen=({navigation})=>{
   const [sendtime, setsendTime] = useState("");
   const [time, setTime] = useState("");
   const [type, setType] = useState(0);
-
+  const [visiblemedicine, setvisiblemedicine] = useState(false);
 
   const [medicine_id, setid] = useState("");
   const [medicine, setName] = useState("");
@@ -43,10 +43,9 @@ const AddScheduleScreen=({navigation})=>{
 
 
   const [chosenDate, setChosenDate] = useState("");
-//   const [date, setDate] = useState(new Date())
+
 
   const [isLoading, setIsLoading] = useState(true);
-  const [dropgetmedicines, setDropdata] = useState([]);
 
 
   const scheduletype = ["Bed time", "Walk" ,"Medicine"]
@@ -73,10 +72,7 @@ const AddScheduleScreen=({navigation})=>{
 
 
   const handleConfirm = (date) => {
-    console.warn("A date has been picked: ", date);
     setTime(moment(date).format('HH:mm DD-MM-YYYY'));
-    setsendTime(moment(date).format('YYYY-MM-DD HH:mm'))
-    // console.log(date);
     hideDatePicker();
   };
 
@@ -114,9 +110,8 @@ const getmedicines= async data=>{
             data,
             }).then(function (response) {
                     response.data
-                    setIsLoading(false)
                     setMedicineList(response.data.data)
-                    setDroplist(response.data.data)
+                    setIsLoading(false)
             }) 
     } 
     catch(error){
@@ -135,7 +130,6 @@ const getmedicines= async data=>{
   
     const ontimechange = (enteredtime) => {
         setChosenDate(enteredtime);
-    //   console.log(date)
     };
 
     const ontypechange = (enteredtype) => {
@@ -203,29 +197,13 @@ const getmedicines= async data=>{
         getmedicines(medicinedata)
       }, []);
   
-    // const modifiedlist=()=>{
-    //    const container=[];
-    //    container=medicinelist.map(item=>{[{'Key':item.id,'Value':item.name}]
-    //     });
-    //     return container
+
+    
+
         
+
            
-  
-    // }
-//     setlist(modifiedlist)
-    useEffect(() => {
-        let listing=[];
-        let keyslist=[];
-        for(let i in medicinelist){
-        listing.push(medicinelist[i].name);
-        keyslist.push(medicinelist[i].id);
-   
-        }
-        setDroplist(listing)
-        setlist(listing)
-        setkeys(keyslist) 
-        // console.log(keyslist)    
-    }, []);
+ 
             
    
       
@@ -234,33 +212,14 @@ const getmedicines= async data=>{
       }
          
 else{
-  
+
   return (
 
     <View style={styles.Medicinecontainer}>
       <Text style={styles.role_text_subtitle}>Add to Schedule</Text>
 
       <View style={styles.scheduleaddcontainer}>
-      <SelectDropdown
-            //   key={keys}
-              data={droplist}
-              buttonStyle={{backgroundColor:'white',borderRadius:10,borderWidth:1,borderColor:'#1A75BC',width:'50%'}}
-              buttonTextStyle={{fontSize:20}}
-              onSelect={(selectedItem, index) => {
-                  selectedItem, index
-                  forceUpdate()
-              }}
-              buttonTextAfterSelection={(selectedItem, index) => {
-                  
-                  return selectedItem
-              }}
-              rowTextForSelection={(item, index) => {
-                 
-                  setType(item)
-                  return item
-              }}
-          />
-
+     
       <Text style={[styles.addschedulelabel, {marginLeft:'0%'}]}>Type</Text>
           <SelectDropdown
             data={scheduletype}
@@ -270,6 +229,9 @@ else{
                 selectedItem, index
             }}
             buttonTextAfterSelection={(selectedItem, index) => {
+                if(selectedItem=='Medicine')
+                  setvisiblemedicine(true)
+                  else setvisiblemedicine(false)
                 return selectedItem
             }}
             rowTextForSelection={(item, index) => {
@@ -299,11 +261,34 @@ else{
       />
 
 
-
-        <Text style={styles.addschedulelabel}>Medicine Name</Text>
+        {visiblemedicine &&
+        <View>
+        <Text style={styles.addschedulelabel}>Medicine Name</Text> 
         
-
-        {/* <TextInput key={'medicinename'} style={styles.input_addschedule_name} value={medicine} placeholder="Medicine Name" onChangeText={onenamechange}/> */}
+        <SelectDropdown
+               key={medicinelist.map(
+                value=>value.id)}
+              data=  {medicinelist.map(
+                value=>value.name)}
+              buttonStyle={{backgroundColor:'white',borderRadius:10,borderWidth:1,borderColor:'#1A75BC',width:'50%'}}
+              buttonTextStyle={{fontSize:20}}
+              onSelect={(selectedItem, index) => {
+                  selectedItem, index
+                 
+              }}
+              buttonTextAfterSelection={(selectedItem, index) => {
+                  
+                  return selectedItem
+              }}
+              rowTextForSelection={(item, index) => {
+                 
+                  setType(item)
+                  return item
+              }}
+          />  
+          </View>
+            }
+      
         
 
        
