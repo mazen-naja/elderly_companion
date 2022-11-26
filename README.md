@@ -51,22 +51,22 @@ Note that i didn't use any styling library or theme, all from scratch and using 
 
 | Role  | Log in |
 | -----------------| -----|
-| ![Role ](./readme/Figma-role.JPG ) | ![Login](./readme/Figma-login.JPG) |
+| <img  width="300px" height="600px"  src="./readme/Figma-role.JPG"/> | <img  width="300px" height="600px"  src="./readme/Figma-login.JPG"/> |
 
 
 | Sign up  | Caretaker's Homepage  |
 | -----------------| -----|
-| <img  width="900px" height="500px"  src="./readme/Figma-Signup.JPG"/>| <img  width="900px" height="500px"  src="./readme/Figma-CaretakerHomepage.JPG"/> 
+| <img  width="300px" height="600px"  src="./readme/Figma-Signup.JPG"/>| <img  width="300px" height="600px"  src="./readme/Figma-CaretakerHomepage.JPG"/> 
 
 
 | Elder's Caretakers | Caretaker's Elders  |
 | -----------------| -----|
-| <img  width="900px" height="500px"  src="./readme/Figma-EldersCaretakers.JPG"/> | <img  width="900px" height="500px"  src="./readme/Figma-CaretakersElders.JPG"/> 
+| <img  width="300px" height="600px"  src="./readme/Figma-EldersCaretakers.JPG"/> | <img  width="300px" height="600px"  src="./readme/Figma-CaretakersElders.JPG"/> 
 
 
 | Chat | Notifications  |
 | -----------------| -----|
-| <img  width="900px" height="500px"  src="./readme/Figma-Chat.JPG"/>| <img  width="900px" height="500px"  src="./readme/Figma-Notifications.JPG"/> 
+| <img  width="300px" height="600px"  src="./readme/Figma-Chat.JPG"/>| <img  width="300px" height="600px"  src="./readme/Figma-Notifications.JPG"/> 
 
 <br><br>
 
@@ -90,27 +90,27 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 
 | Role  | Login  |
 | -----------------| -----|
-| <img  width="900px" height="500px"  src="./readme/role.jpg"/> | <img  width="900px" height="500px"  src="./readme/login.jpg"/> |
+| <img  width="300px" height="600px"  src="./readme/role.jpg"/> | <img  width="300px" height="600px"  src="./readme/login.jpg"/> |
 
 
 
 | Sign up  | Elder Homepage  |
 | -----------------| -----|
- <img  width="900px" height="500px"  src="./readme/signup.jpg"/> |<img  width="900px" height="500px"  src="./readme/ElderHomepage.jpg"/> 
+ <img  width="300px" height="600px"  src="./readme/signup.jpg"/> |<img  width="300px" height="600px"  src="./readme/ElderHomepage.jpg"/> 
 
 | Caretaker's Homepage  | Schedule  |
 | -----------------| -----|
-|<img  width="900px" height="500px"  src="./readme/caretakerhomepage.jpg"/> | <img  width="900px" height="500px"  src="./readme/schedule.jpg"/> |
+|<img  width="300px" height="600px"  src="./readme/caretakerhomepage.jpg"/> | <img  width="300px" height="600px"  src="./readme/schedule.jpg"/> |
 
 | Medicines  | Chat  |
 | -----------------| -----|
-| <img  width="900px" height="500px"  src="./readme/medicine.jpg"/> | <img  width="900px" height="500px"  src="./readme/chat.jpg"/> |
+| <img  width="300px" height="600px"  src="./readme/medicine.jpg"/> | <img  width="300px" height="600px"  src="./readme/chat.jpg"/> |
 
 
 
 | Notifications  | 
 | -----------------|
-| <img  width="300px" height="500px"  src="./readme/notifications.jpg"/> | !
+| <img  width="300px" height="600px"  src="./readme/notifications.jpg"/> | !
 <br><br>
 <img src="./readme/title6.svg"/>
 
