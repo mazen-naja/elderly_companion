@@ -51,22 +51,22 @@ Note that i didn't use any styling library or theme, all from scratch and using 
 
 | Role  | Log in |
 | -----------------| -----|
-| ![Role](./readme/Figma-role.JPG) | ![Login](./readme/Figma-login.JPG) |
+| ![Role ](./readme/Figma-role.JPG ) | ![Login](./readme/Figma-login.JPG) |
 
 
-| Sign up  | Elder's Homepage  |
+| Sign up  | Caretaker's Homepage  |
 | -----------------| -----|
-| ![Sign up](./readme/Figma-Signup.JPG)| ![Caretaker's Homepage](./readme/Figma-CaretakerHomepage.JPG) 
+| <img  width="900px" height="500px"  src="./readme/Figma-Signup.JPG"/>| <img  width="900px" height="500px"  src="./readme/Figma-CaretakerHomepage.JPG"/> 
 
 
 | Elder's Caretakers | Caretaker's Elders  |
 | -----------------| -----|
-| ![Elder's Caretakers](./readme/Figma-EldersCaretakers.JPG)| ![Caretaker's Elders](./readme/Figma-CaretakersElders.JPG) 
+| <img  width="900px" height="500px"  src="./readme/Figma-EldersCaretakers.JPG"/> | <img  width="900px" height="500px"  src="./readme/Figma-CaretakersElders.JPG"/> 
 
 
 | Chat | Notifications  |
 | -----------------| -----|
-| ![Chat](./readme/Figma-Chat.JPG)| ![Notifications](./readme/Figma-Notifications.JPG) 
+| <img  width="900px" height="500px"  src="./readme/Figma-Chat.JPG"/>| <img  width="900px" height="500px"  src="./readme/Figma-Notifications.JPG"/> 
 
 <br><br>
 
@@ -90,27 +90,27 @@ Here's a brief high-level overview of the tech stack the Well app uses:
 
 | Role  | Login  |
 | -----------------| -----|
-| ![Role Screen](./readme/role.jpg) | ![Login](./readme/login.jpg) |
+| <img  width="900px" height="500px"  src="./readme/role.jpg"/> | <img  width="900px" height="500px"  src="./readme/login.jpg"/> |
 
 
 
 | Sign up  | Elder Homepage  |
 | -----------------| -----|
- ![Sign up](./readme/signup.jpg) |![Elder's Homepage](./readme/ElderHomepage.jpg) 
+ <img  width="900px" height="500px"  src="./readme/signup.jpg"/> |<img  width="900px" height="500px"  src="./readme/ElderHomepage.jpg"/> 
 
 | Caretaker's Homepage  | Schedule  |
 | -----------------| -----|
-|![Caretaker's Homepage](./readme/caretakerhomepage.jpg) | ![Schedule](./readme/schedule.jpg) |
+|<img  width="900px" height="500px"  src="./readme/caretakerhomepage.jpg"/> | <img  width="900px" height="500px"  src="./readme/schedule.jpg"/> |
 
 | Medicines  | Chat  |
 | -----------------| -----|
-| ![Medicines](./readme/medicine.jpg) | ![Chat](./readme/chat.jpg) |
+| <img  width="900px" height="500px"  src="./readme/medicine.jpg"/> | <img  width="900px" height="500px"  src="./readme/chat.jpg"/> |
 
 
 
 | Notifications  | 
 | -----------------|
-| ![Notifications](./readme/notifications.jpg) | !
+| <img  width="300px" height="500px"  src="./readme/notifications.jpg"/> | !
 <br><br>
 <img src="./readme/title6.svg"/>
 
